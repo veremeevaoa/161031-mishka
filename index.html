@@ -5,6 +5,7 @@
     <title>HTML Academy: Мишка</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -17,13 +18,31 @@
         </div>
         <button class="top-menu__btn" type="button">Открыть меню</button>
         <nav class="main-nav top-menu__nav  main-nav--closed  main-nav--nojs">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+          <ul class="main-nav__list main-nav__list--catalog">
+            <li class="main-nav__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
           </ul>
           <ul class="main-nav__list  main-nav__list--user">
-            <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item  main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
+            <li class="main-nav__item  main-nav__item--search">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--basket">
+              <a href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list  main-nav__list--info">
+            <li class="main-nav__item  main-nav__item--delivery">
+              <a href="#">Бесплатная доставка по России</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--sale">   <a href="#">Распродажа</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--new">
+              <a href="#">Новые поступления</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -39,21 +58,25 @@
         </ul>
       </header>
       <section class="featured">
-        <h2 class="featured__title">Вязаные корзинки</h2>
-        <span class="featured__action-title">Товар недели</span>
-        <p class="featured__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <div class="featured__properties-table">
-          <div class="featured__properties-row">
-            <div class="featured__properties-cell  featured__properties-cell--left">Цвет:</div>
-            <div class="featured__properties-cell  featured__properties-cell--right">&laquo;Тиффани&raquo;/серый</div>
+        <div class="featured__title-wrapper">
+          <h2 class="featured__title">Вязаные корзинки</h2>
+          <span class="featured__action-title">Товар недели</span>
+        </div>
+        <div class="featured__wrapper">
+          <p class="featured__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <div class="featured__properties-table">
+            <div class="featured__properties-row">
+              <div class="featured__properties-cell  featured__properties-cell--left">Цвет:</div>
+              <div class="featured__properties-cell  featured__properties-cell--right">&laquo;Тиффани&raquo;/серый</div>
+              </div>
+            <div class="featured__properties-row">
+              <div class="featured__properties-cell  featured__properties-cell--left">Диаметр:</div>
+              <div class="featured__properties-cell  featured__properties-cell--right">25 см</div>
             </div>
-          <div class="featured__properties-row">
-            <div class="featured__properties-cell  featured__properties-cell--left">Диаметр:</div>
-            <div class="featured__properties-cell  featured__properties-cell--right">25 см</div>
-          </div>
-          <div class="featured__properties-row">
-            <div class="featured__properties-cell  featured__properties-cell--left">Высота:</div>
-            <div class="featured__properties-cell  featured__properties-cell--right">15 см</div>
+            <div class="featured__properties-row">
+              <div class="featured__properties-cell  featured__properties-cell--left">Высота:</div>
+              <div class="featured__properties-cell  featured__properties-cell--right">15 см</div>
+            </div>
           </div>
         </div>
         <img class="featured__photo" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Фото товара">
@@ -64,37 +87,41 @@
         <h2 class="about__title  about__title--slogans">Коротко о нас:</h2>
         <ul class="about__slogan-list">
           <li class="about__slogan-item">
-            <p>Экологически чистые материалы</p>
+            <p class="about__slogan-text">Экологически чистые материалы</p>
           </li>
           <li class="about__slogan-item">
-            <p>Скандинавский стиль по российской цене</p>
+            <p class="about__slogan-text">Скандинавский стиль по российской цене</p>
           </li>
           <li class="about__slogan-item">
-            <p>Увеличивает лайки на фотографиях</p>
-          </li>
-          <li class="about__slogan-item">
-            <p>Связано вручную с любовью и умилением</p>
-          </li>
-          <li class="about__slogan-item">
-            <p>Поддержка отечественного производителя</p>
-          </li>
-          <li class="about__slogan-item">
-            <p>Поставляется в подарочной упаковке</p>
+            <p class="about__slogan-text">Увеличивает лайки на фотографиях</p>
           </li>
         </ul>
-        <h2 class="about__title  about__title--reviews">Отзывы</h2>
-        <blockquote class="review  about__review-item">
-          <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
-          <cite class="review__author">
-            <span class="review__name">Анастасия Красильникова</span>
-            <span class="review__email">@misssssiskras</span>
-          </cite>
-        </blockquote>
-        <div class="about__toggles">
-          <a class="about__arrow  about__arrow--left" href="#">Предыдущий отзыв</a>
-          <a class="about__arrow  about__arrow--right" href="#">Следующий отзыв</a>
+        <ul class="about__slogan-list">
+          <li class="about__slogan-item">
+            <p class="about__slogan-text">Связано вручную с любовью и умилением</p>
+          </li>
+          <li class="about__slogan-item">
+            <p class="about__slogan-text">Поддержка отечественного производителя</p>
+          </li>
+          <li class="about__slogan-item">
+            <p class="about__slogan-text">Поставляется в подарочной упаковке</p>
+          </li>
+        </ul>
+        <div class="about__review-wrapper">
+          <h2 class="about__title  about__title--reviews">Отзывы</h2>
+          <blockquote class="review about__review-item">
+            <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+            <cite class="review__author">
+              <span class="review__name">Анастасия Красильникова</span>
+              <span class="review__email"><a href="#">@misssssiskras</a></span>
+            </cite>
+          </blockquote>
+          <div class="about__toggles">
+            <a class="about__arrow  about__arrow--left" href="#">Предыдущий отзыв</a>
+            <a class="about__arrow  about__arrow--right" href="#">Следующий отзыв</a>
+          </div>
+          <a class="btn  about__btn" href="#">Написать</a>
         </div>
-        <a class="btn  about__btn" href="#">Написать</a>
       </section>
       <section class="contacts">
         <h3 class="contacts__title">Контакты<span class="visually-hidden">:</span></h3>
@@ -114,18 +141,19 @@
         <a class="btn  contacts__btn" href="#">Напишите нам</a>
       </section>
       <footer class="footer">
+        <a class="footer__logo"><img src="../img/" width="102" height="34" alt="Логотип"></a>
         <div class="social-box">
           <p class="visually-hidden">Мы в соцсетях:</p>
           <p class="social">
-            <a href="" class="social-btn  social-btn--inst">Инстаграм</a>
-            <a href="" class="social-btn  social-btn--fb">Фейсбук</a>
-            <a href="" class="social-btn  social-btn--tw">Твиттер</a>
+            <a href="#" class="social-btn  social-btn--inst">Инстаграм</a>
+            <a href="#" class="social-btn  social-btn--fb">Фейсбук</a>
+            <a href="#" class="social-btn  social-btn--tw">Твиттер</a>
           </p>
         </div>
         <div class="footer__copyright">
           <b>Разработано</b>
-          <a href="https://htmlacademy.ru">
-            <img class="footer__logo-html" src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTMLAcademy">
+          <a href="https://htmlacademy.ru">HTMLAcademy
+<!--            <img class="footer__logo-html" src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTMLAcademy">-->
           </a>
         </div>
       </footer>

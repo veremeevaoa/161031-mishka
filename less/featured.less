@@ -1,50 +1,122 @@
 .featured {
+  position: relative;
   margin: 0 30px;
   padding: 0;
   font-size: 15px;
   line-height: 24px;
 }
+.featured::after {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  min-height: 10px;
+  background: @bg-basecolor url("../img/zigzag-line-decktop.svg");
+}
 .featured__title {
   margin-bottom: 0;
   padding-bottom: 5px;
+  font-family: "OpenSansBold", "Arial", serif;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
-  color: #000000;
+  color: @text-color;
 }
 .featured__action-title {
   padding-top: 0;
   font-size: 17px;
   line-height: 17px;
-  color: #63d1bb;
+  color: @lightgreen;
   text-transform: uppercase;
 }
 .featured__description {
   margin-top: 0;
-  margin-bottom: 17px;
 }
 .featured__properties-table {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   display: table;
-  background: #ccc;
 }
 .featured__properties-row {
   display: table-row;
-  border-bottom: 1px solid #ececec;//почему не отображается?
-  background: #eee;
+  border-bottom: 1px solid @delimiter-color;//почему не отображается?
 }
 .featured__properties-cell {
   display: table-cell;
-  padding: 13px 0;
-  background: #fff;
+  padding: 9px 0;
 }
 .featured__properties-cell--left {
   width: 42%;
 }
+.featured__photo {
+  width: 100%;
+  height: auto;
+}
 .featured__price {
+  font-family: "OpenSansBold", "Arial", serif;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
+}
+.featured__btn {
+  margin-bottom: 30px;
+  padding: 12px 0;
+}
+@media @tablet-widths {
+  .featured {
+    margin: 0 50px;
+  }
+  .featured__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+  .featured__title {
+    margin-top: 37px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .featured__action-title {
+    width: 15%;
+    margin-top: 50px;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .featured__wrapper {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+  }
+  .featured__description {
+    display: block;
+    width: 100%;
+    margin-top: 48px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .featured__photo {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    margin-top: 48px;
+    vertical-align: top;
+  }
+  .featured__properties-table {
+
+  }
+  .featured__price {
+    width: 43%;
+    margin-top: -100px;
+    font-size: 20px;
+    line-height: 24px;
+    color: @text-basecolor;
+    text-align: center;
+  }
+  .featured__btn {
+    width: 43%;
+    margin-top: 15px;
+    padding: 12px 0;
+    text-align: center;
+  }
 }
 

@@ -1,10 +1,14 @@
 .top-menu {
+  display: flex;
+  justify-content: center;
   position: relative;
   margin: 0;
-  padding: 22px 30px;
-  text-align: center;
-  border-bottom: 1px solid #ececec;
-  background: #ffffff;
+  padding: 22px 0;
+  border-bottom: 1px solid @delimiter-color;
+  background: @bg-basecolor;
+  &:hover .top-menu__nav {
+    display: block;
+  }
 }
 .top-menu__logo {
   height: 35px;
@@ -15,47 +19,38 @@
   margin: 0;
   padding: 0;
 }
-.main-nav__list {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.main-nav__list--user {
-  top: 236px;
-}
-.main-nav__item a {
-  display: block;
-  width: 100%;
-  padding-top: 27px;
-  padding-bottom: 26px;
-  font-family: "OpenSans", "Arial", serif;
-  font-size: 17px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
-  cursor: pointer;
-}
 .top-menu__btn {
   position: absolute;
-  top: 29px;
+  top: 32px;
   right: 30px;
   width: 20px;
   height: 55px;//заменить на 20px после подключения js
-  color: #000000;
-  background: #ffffff url("../img/icon-menu-open.svg") no-repeat top center;
+  color: @text-color;
+  background: @bg-basecolor url("../img/icon-menu-open.svg") no-repeat top center;
   text-indent: -9999px;
   border: none;
   outline: none;
   cursor: pointer;
 }
-.top-menu__btn:hover + .top-menu__nav {
-  display: block;
+
+@media @tablet-widths {
+  .top-menu__btn {
+    display: none;
+  }
+  .top-menu {
+    justify-content: space-between;
+    padding: 25px 50px 25px;
+  }
+  .top-menu__logo {
+    magin-left: 50px;
+  }
+  .top-menu__nav {
+    display: block;
+  }
 }
+@media @desktop-widths {
+  .top-menu__logo {
+    margin-left: 47%;
+  }
+}
+

@@ -3,6 +3,9 @@
   text-align: center;
   background-color: #f1f1f1;
 }
+.footer__logo {
+  display: none;
+}
 .footer__copyright {
   padding-top: 22px;
   border-top: 1px solid #e5e5e5;
@@ -15,16 +18,45 @@
   vertical-align: top;
 }
 .footer__copyright b {
+  font-family: "OpenSansBold", "Arial", serif;
   margin-right: 30px;
   font-size: 20px;
   font-weight: 700;
   color: #000000;
 }
 .footer__copyright a {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
   box-sizing: border-box;
+  text-indent: -9999px;
+  background: transparent url("../img/logo-htmlacademy.svg") no-repeat center;
 }
 .footer__logo-html {
   width: 27px;
   height: 34px;
   box-sizing: border-box;
 }
+@media @tablet-widths {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+    align-items: center;
+  }
+  .footer__logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .social-box {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+  .footer__copyright {
+    border: none;
+  }
+}
+
+
