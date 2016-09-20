@@ -1,9 +1,16 @@
 .hidden {
   display: none;
 }
-.boldfont {
-  font-family: "OpenSansBold", "Arial", sans-serif;
+.font(@family:"OpenSans", "Arial", sans-serif; @size:15px; @height:24px) {
+  font-family: @family;
+  font-size: @size;
+  line-height: @height;
 }
-.commonfont {
-  font-family: "OpenSans", "Arial", sans-serif;
+.font(bold; @family:"OpenSansBold", "Arial", sans-serif; @size:15px; @height:24px) {
+  font-family: @family;
+  font-size: @size;
+  line-height: @height;
+}
+.font(@_;@family; @size; @height) {
+  font-weight: 400;
 }
