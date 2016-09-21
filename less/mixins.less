@@ -1,16 +1,17 @@
 .hidden {
   display: none;
 }
-.font(@family:"OpenSans", "Arial", sans-serif; @size:15px; @height:24px) {
+.font(@family: @common; @size: 15px; @height: 24px; @weight:400;) {
   font-family: @family;
   font-size: @size;
   line-height: @height;
+  font-weight: @weight;
 }
-.font(bold; @family:"OpenSansBold", "Arial", sans-serif; @size:15px; @height:24px) {
-  font-family: @family;
-  font-size: @size;
-  line-height: @height;
-}
-.font(@_;@family; @size; @height) {
-  font-weight: 400;
-}
+//.font(bold; @family:"OpenSansBold", "Arial", sans-serif; @size:15px; @height:24px) {
+//  font-family: @family;
+//  font-size: @size;
+//  line-height: @height;
+//}
+//.font(@_;@family; @size; @height) {
+//  font-weight: 400;
+//}
