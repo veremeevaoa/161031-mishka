@@ -5,12 +5,10 @@
 
   @media @tablet-widths {
     width: 768px;
-//    padding: 0 50px;
   }
 
   @media @desktop-widths {
     width: 1150px;
-//    padding: 0 50px;
   }
 }
 .hidden {
@@ -23,9 +21,9 @@
     clear: both;
   }
 }
-.boldfont {
-  font-family: "OpenSansBold", "Arial", sans-serif;
-}
-.commonfont {
-  font-family: "OpenSans", "Arial", sans-serif;
+.font(@family: @common; @size: 15px; @height: 24px; @weight:400;) {
+  font-family: @family;
+  font-size: @size;
+  line-height: @height;
+  font-weight: @weight;
 }
