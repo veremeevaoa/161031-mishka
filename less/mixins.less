@@ -11,7 +11,7 @@
     width: 1150px;
   }
 }
-.hidden {
+.hidden() {
   display: none;
 }
 .clearfix() {
@@ -21,9 +21,8 @@
     clear: both;
   }
 }
-.font(@family: @common; @size: 15px; @height: 24px; @weight:400;) {
+.font(@family: @common; @size: 15px; @height: 24px;) {
   font-family: @family;
   font-size: @size;
   line-height: @height;
-  font-weight: @weight;
 }
