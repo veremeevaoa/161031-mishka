@@ -1,24 +1,25 @@
 .review {
   .font(@height:30px);
-//  font-family: "OpenSans", "Arial", serif;
-//  font-size: 15px;
-//  line-height: 30px;
-//  font-weight: 400;
   color: @text-basecolor;
 }
 .review__name {
   .font(@bold;18px;);
-//  font-family: "OpenSansBold", "Arial", serif;
-//  font-size: 18px;
-//  line-height: 24px;
-//  font-weight: 700;
   color: @text-color;
 }
 .review__email {
   .font(@size:18px;@height:30px);
-//  font-size: 18px;
-//  line-height: 30px;
-//  font-weight: 400;
+}
+.review__author {
+  .font(@bold;17px;26px);
+  display: inline-block;
+  padding: 0;
+  margin-top: 11px;
+  font-style: normal;
+}
+.review__email a {
+  .font(@common;18px;28px);
+  color: @text-basecolor;
+  text-decoration: none;
 }
 @media @tablet-widths {
   .review__author {
