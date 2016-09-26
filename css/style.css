@@ -52,7 +52,7 @@ img {
   justify-content: center;
   position: relative;
   margin: 0;
-  padding: 18px 0;
+  padding: 14px 0 22px;
   border-bottom: 1px solid #e5e5e5;
   background: #ffffff;
 }
@@ -61,7 +61,6 @@ img {
 }
 .top-menu__logo {
   height: 35px;
-  margin-left: 20px;
   box-sizing: border-box;
 }
 .top-menu__nav {
@@ -72,7 +71,7 @@ img {
 }
 .top-menu__btn {
   position: absolute;
-  top: 32px;
+  top: 22px;
   right: 30px;
   width: 20px;
   height: 20px;
@@ -137,6 +136,7 @@ img {
 @media (min-width: 768px) {
   .main-nav__list--catalog {
     display: flex;
+    margin-top: 7px;
     position: absolute;
     left: 32px;
     z-index: 2;
@@ -170,7 +170,7 @@ img {
   .main-nav__list--info {
     display: flex;
     justify-content: flex-end;
-    margin-top: 2px;
+    margin-top: 10px;
     margin-right: 50px;
   }
   .main-nav__item--sale {
@@ -370,7 +370,7 @@ img {
   margin: auto;
   margin-top: 70px;
   font-family: "Verdana", "Arial", san-serif;
-  font-size: 27px;
+  font-size: 25px;
   line-height: 30px;
   font-weight: 700;
   color: #000000;
@@ -384,7 +384,7 @@ img {
     font-size: 43px;
     line-height: 50px;
     display: block;
-    margin-top: 94px;
+    margin-top: 92px;
   }
 }
 @media (min-width: 1150px) {
@@ -1307,7 +1307,7 @@ img {
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 24px;
-  padding: 30px;
+  padding: 23px 30px 30px;
   color: #444444;
 }
 .order-form__description {
@@ -1315,14 +1315,15 @@ img {
   font-size: 13px;
   line-height: 24px;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 .order-form__form {
   padding: 0;
   border: none;
 }
 .order-form__category {
-  margin-bottom: 27px;
+  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
   border: none;
   border-top: 1px solid #63d1bb;
@@ -1331,7 +1332,10 @@ img {
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 17px;
   line-height: 17px;
-  margin-bottom: 23px;
+  display: block;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
   padding-right: 27px;
   color: #63d1bb;
   text-transform: uppercase;
@@ -1345,16 +1349,50 @@ img {
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
+  position: relative;
   display: block;
-  padding: 12px;
-  padding-left: 65px;
   color: #000000;
+}
+.order-form__section-label::before,
+.order-form__color-label::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: "";
+  border: 2px solid #000000;
+  background: transparent;
+}
+.order-form__section-label {
+  padding: 10px 0 14px;
+  padding-left: 63px;
+}
+.order-form__section-label::before {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.order-form__section-label--last {
+  margin-bottom: 19px;
+  padding: 15px 0 9px;
+  padding-left: 63px;
+}
+.order-form__color-label {
+  margin-bottom: 19px;
+  padding: 12px 0;
+  padding-left: 63px;
+}
+.order-form__color-label::before {
+  width: 36px;
+  height: 36px;
 }
 .order-form__name-label {
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
+  display: block;
   color: #000000;
+  margin-top: 10px;
 }
 .order-form__name-field,
 .order-form__telephon-field,
@@ -1365,19 +1403,28 @@ img {
   display: block;
   width: 100%;
   margin-bottom: 24px;
-  padding: 15px 0;
+  padding: 15px 0 15px;
   color: #444444;
+  background: transparent;
   border: none;
   border-bottom: 2px solid #000000;
+}
+.order-form__category--tel {
+  margin-bottom: 16px;
+}
+.order-form__category-name--tel,
+.order-form__category-name--email {
+  margin-bottom: 8px;
 }
 .order-form__description-field {
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   display: block;
-  width: 86%;
+  width: 87%;
   margin: 0;
-  padding: 17px;
+  margin-top: 8px;
+  padding: 15px;
   color: #444444;
   border: 2px solid #000000;
 }
@@ -1394,7 +1441,204 @@ img {
   color: #444444;
 }
 .order-form__btn {
+  width: 100%;
   margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .order-form {
+    margin: 50px 20px 0;
+  }
+  .order-form__description {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  .order-form__category {
+    position: relative;
+    margin: 0 -50px;
+    margin-bottom: 20px;
+    padding: 0 50px 0 217px;
+    border: none;
+  }
+  .order-form__category-name {
+    position: absolute;
+    top: 28px;
+    left: 52px;
+  }
+  .order-form__section-label {
+    font-family: "OpenSansBold", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 20px;
+    padding: 26px 0 30px;
+    padding-left: 80px;
+  }
+  .order-form__section-label::before {
+    top: 11px;
+    width: 48px;
+    height: 48px;
+  }
+  .order-form__category--color {
+    margin: 0 -50px 80px;
+    padding: 55px 0 0 217px;
+    background: #f1f1f1;
+  }
+  .order-form__category-name--color {
+    top: 77px;
+    left: 52px;
+  }
+  .order-form__color-label {
+    font-family: "OpenSansBold", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 20px;
+    display: inline-block;
+    width: 32.5%;
+    margin-bottom: 10px;
+    padding: 20px 0 26px;
+    padding-left: 80px;
+  }
+  .order-form__color-label::before {
+    top: 5px;
+    width: 50px;
+    height: 49px;
+  }
+  .order-form__category--username {
+    margin-bottom: 43px;
+    padding-top: 12px;
+  }
+  .order-form__name-label {
+    font-family: "OpenSansBold", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 20px;
+    display: inline-block;
+    padding-right: 20px;
+    color: #000000;
+  }
+  .order-form__name-field {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    display: inline-block;
+    width: 71%;
+    padding-left: 20px;
+  }
+  .order-form__category--tel {
+    margin-bottom: 0;
+    padding-top: 55px;
+    background: #f1f1f1;
+  }
+  .order-form__category-name--tel {
+    top: 70px;
+  }
+  .order-form__telephon-field,
+  .order-form__email-field {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 20px;
+    width: 97%;
+    padding: 13px 0 15px;
+    padding-left: 17px;
+  }
+  .order-form__category--email {
+    margin-bottom: 56px;
+    padding-top: 2px;
+    padding-bottom: 43px;
+    background: #f1f1f1;
+  }
+  .order-form__category-name--email {
+    top: 17px;
+  }
+  .order-form__category--description {
+    margin-bottom: 50px;
+  }
+  .order-form__category-name--description {
+    top: 25px;
+  }
+  .order-form__description-field {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 20px;
+    width: 93.5%;
+    padding: 12px 15px 6px;
+  }
+  .order-form__note {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    float: right;
+  }
+  .order-form__btn {
+    margin-top: 3px;
+    width: 34.5%;
+  }
+}
+@media (min-width: 1150px) {
+  .order-form {
+    margin-top: 100px;
+  }
+  .order-form__description {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0 175px 46px;
+  }
+  .order-form__category {
+    position: relative;
+    margin: 0 -50px;
+    margin-bottom: 20px;
+    padding: 0 225px 0;
+    border: none;
+  }
+  .order-form__category-name {
+    position: absolute;
+    top: 28px;
+    left: 115px;
+  }
+  .order-form__category--color {
+    margin: 0 -50px 95px;
+    padding: 55px 0 0 225px;
+    background: #f1f1f1;
+  }
+  .order-form__category-name--color {
+    top: 77px;
+    left: 110px;
+  }
+  .order-form__color-label {
+    width: 19.4%;
+    margin-bottom: 10px;
+    padding: 20px 0 26px;
+    padding-left: 80px;
+  }
+  .order-form__color-label::before {
+    top: 5px;
+    width: 50px;
+    height: 49px;
+  }
+  .order-form__category--tel {
+    margin-bottom: 0;
+    margin-top: 43px;
+    padding-top: 55px;
+  }
+  .order-form__category--email {
+    margin-bottom: 56px;
+    padding-top: 2px;
+    padding-bottom: 43px;
+  }
+  .order-form__category--description {
+    margin-bottom: 87px;
+  }
+  .order-form__description-field {
+    width: 95%;
+  }
+  .order-form__note {
+    margin-right: 175px;
+  }
+  .order-form__btn {
+    width: 22%;
+    margin-left: 175px;
+    margin-bottom: 70px;
+  }
 }
 .footer {
   padding: 24px 30px 20px;
