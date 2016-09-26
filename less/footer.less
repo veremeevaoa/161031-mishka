@@ -1,25 +1,25 @@
 .footer {
   padding: 24px 30px 20px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: @bg-secondcolor;
 }
 .footer__logo {
   display: none;
 }
 .footer__copyright {
   padding-top: 22px;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid @delimiter-color;
 }
-.footer__copyright b,
+.footer__copyright .footer__copyright-text,
 .footer__copyright a {
   margin: 0;
   padding: 0;
   display: inline;
   vertical-align: top;
 }
-.footer__copyright b {
+.footer__copyright .footer__copyright-text {
   .font(@bold;20px;);
-  color: #000000;
+  color: @text-color;
 }
 .footer__copyright a {
   display: inline-block;

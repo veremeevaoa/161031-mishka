@@ -1088,8 +1088,8 @@ img {
 .catalog-card__link-photo {
   display: block;
   margin: 0;
-  margin-bottom: -6px;
   padding: 0;
+  line-height: 0;
   text-decoration: none;
   background: #f1f1f1;
 }
@@ -1652,14 +1652,14 @@ img {
   padding-top: 22px;
   border-top: 1px solid #e5e5e5;
 }
-.footer__copyright b,
+.footer__copyright .footer__copyright-text,
 .footer__copyright a {
   margin: 0;
   padding: 0;
   display: inline;
   vertical-align: top;
 }
-.footer__copyright b {
+.footer__copyright .footer__copyright-text {
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 20px;
   line-height: 24px;
