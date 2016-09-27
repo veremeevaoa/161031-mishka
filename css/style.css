@@ -710,9 +710,25 @@ img {
   line-height: 30px;
 }
 .about__toggles {
+  width: 100%;
   min-height: 52px;
   margin: 30px 0 38px;
-  background: #eee;
+  padding: 0;
+}
+.about__arrow {
+  display: inline-block;
+  width: 49%;
+  min-height: 50px;
+  text-indent: -9999px;
+  vertical-align: top;
+  border: 1px solid #ececec;
+}
+.about__arrow--left {
+  margin-right: -4px;
+  background: transparent url("../img/icon-left-arrow.svg") no-repeat 50%;
+}
+.about__arrow--right {
+  background: transparent url("../img/icon-right-arrow.svg") no-repeat 50%;
 }
 @media (min-width: 768px) {
   .about {
@@ -762,6 +778,7 @@ img {
     margin-left: 2px;
   }
   .about__toggles {
+    width: 30%;
     position: absolute;
     right: 0;
     bottom: 20px;
@@ -824,7 +841,8 @@ img {
     padding-bottom: 0;
   }
   .about__toggles {
-    right: 0;
+    width: 25%;
+    right: -17px;
     bottom: 100px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -1686,6 +1704,7 @@ img {
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 20px;
   line-height: 24px;
+  margin-right: 30px;
   color: #000000;
 }
 .footer__copyright a {
