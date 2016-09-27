@@ -290,10 +290,10 @@ img {
   color: #ffffff;
   text-align: left;
   text-decoration: none;
-  background: #63d1bb;
+  background: #63d1bb url("../img/icon-interior.svg") no-repeat 90% 50%;
 }
 .main-header__submenu-link--toys {
-  background: #56c3b2;
+  background: #56c3b2 url("../img/icon-toy.svg") no-repeat 90% 50%;
 }
 @media (min-width: 768px) {
   .main-header {
@@ -346,7 +346,6 @@ img {
     color: #ffffff;
     text-align: left;
     text-decoration: none;
-    background: #63d1bb;
   }
   .main-header__title {
     font-family: "OpenSansBold", "Arial", sans-serif;
@@ -1722,4 +1721,7 @@ img {
   .footer__copyright {
     border: none;
   }
+}
+.modal {
+  display: none;
 }
