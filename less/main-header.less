@@ -8,14 +8,15 @@
   width: 100%;
   min-height: 489px;
   text-align: center;
-  background: #e5e5e5 url("../img/hero-mobile@1x.jpg") no-repeat top center;
+  background: @bg-secondcolor url("../img/hero-mobile@1x.jpg") no-repeat top center;
+  background-size: cover;
 }
 .main-header__title {
   .font(@bold;26px;30px);
+  width: 70%;
+  margin: 0 auto;
   margin-bottom: 120px;
-//  font-size: 26px;
-//  line-height: 30px;
-  color: #000000;
+  color: @text-color;
 }
 .main-header__submenu {
   width: 100%;
@@ -28,18 +29,72 @@
   margin: 0;
   padding: 0;
 }
-.main-header__submenu-item a {
+.main-header__submenu-link {
   .font(@bold;19px;);
   display: block;
-  padding: 30px;
+  padding: 28px 30px;
   padding-right: 135px;
-//  font-size: 19px;
-//  line-height: 24px;
-  color: #ffffff;
+  color: @bg-basecolor;
   text-align: left;
   text-decoration: none;
-  background: #63d1bb;
+  background: @lightgreen url("../img/icon-interior.svg") no-repeat 90% 50%;
 }
-.main-header__submenu-item--toys a {
-  background: #56c3b2;
+.main-header__submenu-link--toys {
+  background: @darkgreen url("../img/icon-toy.svg") no-repeat 90% 50%;
 }
+@media @tablet-widths {
+  .main-header {
+    min-height: 746px;
+  }
+  .main-header__submenu {
+    display: flex;
+    width: 87%;
+    margin: 0 50px;
+    background: #ccc;
+  }
+  .main-header__submenu-item {
+    width: 50%;
+    background: #fff;
+  }
+  .main-header__submenu-link {
+    .font(@bold;19px;30px;);
+    padding: 28px 38px 34px;
+    padding-right: 135px;
+  }
+  .main-header__title {
+    .font(@bold;43px;50px);
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 372px;
+    color: @text-color;
+  }
+}
+@media @desktop-widths {
+  .main-header {
+    min-height: 746px;
+  }
+  .main-header__submenu {
+    display: flex;
+    flex-direction: row;
+    width: 91.3%;
+    margin: 0 50px;
+  }
+  .main-header__submenu-link {
+    .font(@bold;19px;30px);
+    display: block;
+    padding: 30px 40px 34px;
+    padding-right: 320px;
+    color: @bg-basecolor;
+    text-align: left;
+    text-decoration: none;
+  }
+  .main-header__title {
+    .font(@bold;53px;57px);
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 360px;
+    color: @text-color;
+  }
+}
+
+

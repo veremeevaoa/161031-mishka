@@ -1,19 +1,39 @@
 .page-header {
   display: flex;
+  min-height: 176px;
   margin: 0;
-  padding: 1px 0;
-  min-height: 177px;
-  background-color: #f1f1f1;
-  text-align: center;
-  vertical-align: middle;
+  padding: 0;
+  background-color: @bg-secondcolor;
 }
 .page-header__title {
   display: block;
   margin: auto;
-  font-family: "Verdana", "Arial", serif;
-  font-size: 26px;
+  margin-top: 70px;
+  font-family: "Verdana", "Arial", san-serif;
+  font-size: 25px;
   line-height: 30px;
   font-weight: 700;
-  color: #000000;
+  color: @text-color;
+}
+
+@media @tablet-widths {
+  .page-header {
+    min-height: 223px;
+  }
+  .page-header__title {
+    .font(@bold;43px;50px;);
+    display: block;
+    margin-top: 92px;
+  }
+}
+@media @desktop-widths {
+  .page-header {
+    min-height: 250px;
+  }
+  .page-header__title {
+    .font(@bold;53px;60px;);
+    display: block;
+    margin-top: 90px;
+  }
 }
 
