@@ -14,6 +14,7 @@
 .center-wrapper {
   width: 320px;
   margin: 0 auto;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .center-wrapper {
@@ -29,6 +30,8 @@ body {
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
   min-width: 320px;
   color: #444444;
   background-color: #ffffff;
@@ -49,34 +52,34 @@ img {
 }
 .top-menu {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
   margin: 0;
-  padding: 14px 0 22px;
+  padding: 0;
+  padding-top: 21px;
+  border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
   background: #ffffff;
-}
-.top-menu:hover .top-menu__nav {
-  display: block;
 }
 .top-menu__logo {
   height: 35px;
   box-sizing: border-box;
 }
 .top-menu__nav {
-  display: none;
   width: 100%;
   margin: 0;
+  margin-top: 22px;
   padding: 0;
 }
 .top-menu__btn {
   position: absolute;
-  top: 22px;
+  top: 28px;
   right: 30px;
   width: 20px;
   height: 20px;
   z-index: 2;
-  color: #000000;
   background: #ffffff url("../img/icon-menu-close.svg") no-repeat top center;
   text-indent: -9999px;
   border: none;
@@ -88,14 +91,22 @@ img {
     display: none;
   }
   .top-menu {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 21px 50px;
+    padding: 27px 50px;
   }
   .top-menu__logo {
-    magin-left: 50px;
+    position: relative;
+    z-index: 2;
   }
   .top-menu__nav {
     display: block;
+    width: 50%;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    border-top: none;
   }
 }
 @media (min-width: 1150px) {
@@ -104,16 +115,10 @@ img {
   }
 }
 .main-nav__list {
-  position: absolute;
-  top: 72px;
-  right: 0;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.main-nav__list--user {
-  top: 228px;
 }
 .main-nav__item-link {
   font-family: "OpenSansBold", "Arial", sans-serif;
@@ -127,19 +132,23 @@ img {
   text-decoration: none;
   text-align: center;
   background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
+  border-top: 1px solid #ececec;
   cursor: pointer;
 }
 .main-nav__list--info {
   display: none;
 }
 @media (min-width: 768px) {
-  .main-nav__list--catalog {
-    display: flex;
-    margin-top: 7px;
+  .main-nav__list {
     position: absolute;
+    top: 80px;
+    right: 0;
+  }
+  .main-nav__list--catalog {
     left: 32px;
-    z-index: 2;
+    display: flex;
+    margin-top: 10px;
+    width: 52%;
   }
   .main-nav__list--catalog .main-nav__item-link {
     font-family: "OpenSansBold", "Arial", sans-serif;
@@ -147,7 +156,7 @@ img {
     line-height: 24px;
     display: block;
     margin-top: 10px;
-    padding: 9px 0;
+    padding: 7px 0;
     padding-right: 36px;
     color: #444444;
     border: none;
@@ -155,21 +164,38 @@ img {
     cursor: pointer;
   }
   .main-nav__list--user {
-    position: inherit;
+    top: 0px;
+    right: 50px;
     display: flex;
+    justify-content: flex-end;
+    width: 65%;
     margin: 0;
     padding: 0;
   }
   .main-nav__list--user .main-nav__item {
+    margin: 0;
     border-left: 1px solid #ececec;
   }
   .main-nav__list--user .main-nav__item-link {
-    padding: 5px 15px 10px;
-    border-bottom: none;
+    margin: 0;
+    padding: 31px 30px 33px;
+    border: none;
+  }
+  .main-nav__item--search .main-nav__item-link {
+    width: 22px;
+    text-indent: -9999px;
+    background: transparent url("../img/icon-search.svg") no-repeat center;
+  }
+  .main-nav__item--basket .main-nav__item-link {
+    width: auto;
+    padding-left: 82px;
+    padding-right: 0;
+    background: transparent url("../img/icon-cart.svg") no-repeat 32px 35px;
   }
   .main-nav__list--info {
     display: flex;
     justify-content: flex-end;
+    width: 35%;
     margin-top: 10px;
     margin-right: 50px;
   }
@@ -194,26 +220,36 @@ img {
   .main-nav__list--catalog {
     display: flex;
     position: absolute;
-    top: 16px;
+    top: 0;
     left: 50px;
-    z-index: 1;
+    width: 36%;
     margin: 0;
     padding: 0;
   }
   .main-nav__list--catalog .main-nav__item {
     margin: 0;
+    padding: 0;
     border-right: 1px solid #ececec;
   }
   .main-nav__list--catalog .main-nav__item-link {
     font-family: "OpenSansBold", "Arial", sans-serif;
     font-size: 17px;
     line-height: 24px;
-    padding: 5px 30px 10px 0;
+    width: auto;
+    margin: 0;
+    padding: 31px 30px 33px 0;
     border-bottom: none;
+  }
+  .main-nav__item--form .main-nav__item-link {
+    padding-left: 30px;
+  }
+  .main-nav__list--user {
+    width: 36%;
   }
   .main-nav__list--info {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   .main-nav__item--sale {
     display: inline-block;
@@ -426,7 +462,7 @@ img {
   font-size: 15px;
   line-height: 24px;
   position: relative;
-  margin: 0 30px;
+  margin: 0 30px 20px;
   padding: 0;
 }
 .featured::after {
@@ -538,6 +574,17 @@ img {
     margin-top: 48px;
     margin-bottom: 37px;
   }
+  .featured__properties-cell {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .featured__properties-cell--left {
+    width: 30%;
+  }
+  .featured__properties-cell--right {
+    width: 60%;
+  }
   .featured__photo {
     display: inline-block;
     width: 50%;
@@ -549,7 +596,7 @@ img {
     font-family: "OpenSansBold", "Arial", sans-serif;
     font-size: 20px;
     line-height: 24px;
-    width: 43%;
+    width: 44%;
     margin-top: -115px;
     color: #444444;
     text-align: center;
@@ -629,8 +676,18 @@ img {
   }
 }
 .about {
+  position: relative;
   margin: 0;
-  padding: 0 30px;
+  padding: 0 30px 30px;
+}
+.about::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  content: "";
+  background: transparent url("../img/zigzag-line-decktop.svg");
 }
 .about__title {
   font-family: "OpenSansBold", "Arial", sans-serif;
@@ -733,7 +790,7 @@ img {
 @media (min-width: 768px) {
   .about {
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     padding: 1px 50px;
   }
   .about__title {
@@ -761,8 +818,15 @@ img {
     padding-top: 77px;
     color: #000000;
   }
+  .about__slogan-text::before {
+    top: 28px;
+    width: 55px;
+    height: 26px;
+    padding-bottom: 20px;
+  }
   .about__review-wrapper {
     position: relative;
+    min-height: 455px;
     margin-top: 10px;
     margin-left: -50px;
     padding: 1px 0 1px 47px;
@@ -778,12 +842,18 @@ img {
     margin-left: 2px;
   }
   .about__toggles {
-    width: 30%;
+    width: 25%;
+    padding: 0;
     position: absolute;
-    right: 0;
-    bottom: 20px;
+    right: -4px;
+    bottom: 48px;
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+  .about__arrow {
+    width: 49%;
+    margin-right: -7px;
+    border: none;
   }
   .about__btn {
     position: absolute;
@@ -797,7 +867,7 @@ img {
     width: 75%;
     margin: 0;
     margin-left: 171px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     padding: 1px 50px;
   }
   .about__title {
@@ -841,8 +911,8 @@ img {
     padding-bottom: 0;
   }
   .about__toggles {
-    width: 25%;
-    right: -17px;
+    width: 18%;
+    right: -25px;
     bottom: 100px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -889,10 +959,18 @@ img {
 }
 @media (min-width: 768px) {
   .review__author {
+    font-family: "OpenSansBold", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
     display: block;
     width: 45%;
     margin-top: 57px;
     padding-top: 1px;
+  }
+  .review__email a {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 28px;
   }
   .review p {
     font-family: "OpenSans", "Arial", sans-serif;
@@ -931,7 +1009,7 @@ img {
   }
 }
 .contacts {
-  margin: 86px 30px 39px;
+  margin: 56px 30px 40px;
 }
 .contacts__title {
   font-family: "OpenSansBold", "Arial", sans-serif;
@@ -982,7 +1060,7 @@ img {
 @media (min-width: 768px) {
   .contacts {
     margin: 0;
-    margin-top: 127px;
+    margin-top: 102px;
     padding: 1px 50px;
   }
   .contacts__title {
@@ -990,6 +1068,7 @@ img {
     font-size: 43px;
     line-height: 50px;
     position: relative;
+    margin-left: -5px;
     margin-bottom: 50px;
   }
   .contacts__title::after {
@@ -1048,6 +1127,7 @@ img {
 }
 @media (min-width: 1150px) {
   .contacts {
+    margin-top: 125px;
     margin-bottom: 50px;
   }
   .contacts::after {
@@ -1077,7 +1157,7 @@ img {
   }
   .contacts__table {
     display: table;
-    width: 30%;
+    width: 28%;
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: 175px;
@@ -1088,9 +1168,15 @@ img {
     width: 100%;
     vertical-align: top;
   }
+  .contacts__cell {
+    display: table-cell;
+  }
+  .contacts__cell--left {
+    width: 26%;
+  }
   .contacts__map {
     float: right;
-    width: 55%;
+    width: 54.5%;
     margin-top: -380px;
     background-size: auto;
   }
@@ -1739,6 +1825,12 @@ img {
   }
   .footer__copyright {
     border: none;
+  }
+  .footer__copyright .footer__copyright-text {
+    font-family: "OpenSansBold", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 24px;
+    margin-right: 23px;
   }
 }
 .modal {

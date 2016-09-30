@@ -1,7 +1,7 @@
 .featured {
   .font;
   position: relative;
-  margin: 0 30px;
+  margin: 0 30px 20px;
   padding: 0;
 }
 .featured::after {
@@ -102,6 +102,15 @@
     margin-top: 48px;
     margin-bottom: 37px;
   }
+  .featured__properties-cell {
+    .font(@common;15px;24px); 
+  }
+  .featured__properties-cell--left {
+    width: 30%;
+  }
+  .featured__properties-cell--right {
+    width: 60%;
+  }
   .featured__photo {
     display: inline-block;
     width: 50%;
@@ -111,7 +120,7 @@
   }
   .featured__price {
     .font(@bold;20px;);  
-    width: 43%;
+    width: 44%;
     margin-top: -115px;
     color: @text-basecolor;
     text-align: center;

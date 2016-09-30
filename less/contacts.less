@@ -1,5 +1,5 @@
 .contacts {
-  margin: 86px 30px 39px;
+  margin: 56px 30px 40px;
 }
 .contacts__title {
   .font(@bold;18px;30px);
@@ -44,12 +44,13 @@
 @media @tablet-widths {
   .contacts {
     margin: 0;
-    margin-top: 127px;
+    margin-top: 102px;
     padding: 1px 50px;
   }
   .contacts__title {
     .font(@bold;43px;50px);
     position: relative;
+    margin-left: -5px;
     margin-bottom: 50px;
   }
   .contacts__title::after {
@@ -105,6 +106,7 @@
 @media @desktop-widths {
   .contacts {
     .clearfix();
+    margin-top: 125px;
     margin-bottom: 50px;
   }
   .contacts__title {
@@ -127,7 +129,7 @@
   }
   .contacts__table {
     display: table;
-    width: 30%;
+    width: 28%;
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: 175px;
@@ -138,9 +140,15 @@
     width: 100%;
     vertical-align: top;
   }
+  .contacts__cell {
+    display: table-cell;
+  }
+  .contacts__cell--left {
+    width: 26%;
+  }
   .contacts__map {
     float: right;
-    width: 55%;
+    width: 54.5%;
     margin-top: -380px;
     background-size: auto;
   }
