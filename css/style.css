@@ -1445,10 +1445,15 @@ img {
   margin-bottom: 23px;
 }
 .order-form__form {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   border: none;
 }
 .order-form__category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -1573,7 +1578,7 @@ img {
 }
 @media (min-width: 768px) {
   .order-form {
-    margin: 50px 20px 0;
+    margin: 52px 20px 0;
   }
   .order-form__description {
     font-family: "OpenSans", "Arial", sans-serif;
@@ -1582,7 +1587,14 @@ img {
     margin-top: 0;
     margin-bottom: 45px;
   }
+  .order-form__form {
+    display: flex;
+    flex-direction: column;
+  }
   .order-form__category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
     margin: 0 -50px;
     margin-bottom: 20px;
@@ -1590,6 +1602,9 @@ img {
     border: none;
   }
   .order-form__category-name {
+    font-family: "OpenSansBold", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 17px;
     position: absolute;
     top: 28px;
     left: 52px;
@@ -1598,6 +1613,7 @@ img {
     font-family: "OpenSansBold", "Arial", sans-serif;
     font-size: 19px;
     line-height: 20px;
+    width: 75%;
     padding: 26px 0 30px;
     padding-left: 80px;
   }
@@ -1607,6 +1623,10 @@ img {
     height: 48px;
   }
   .order-form__category--color {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     margin: 0 -50px 80px;
     padding: 55px 0 0 217px;
     background: #f1f1f1;
@@ -1619,11 +1639,13 @@ img {
     font-family: "OpenSansBold", "Arial", sans-serif;
     font-size: 19px;
     line-height: 20px;
-    display: inline-block;
-    width: 32.5%;
+    display: block;
+    width: 22%;
+    margin: 0;
     margin-bottom: 10px;
     padding: 20px 0 26px;
     padding-left: 80px;
+    background: #ccc;
   }
   .order-form__color-label::before {
     top: 5px;
